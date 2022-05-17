@@ -1,0 +1,213 @@
+.navbar{
+  list-style-type: none;
+  margin: 0;
+  padding: 0; 
+
+  overflow: hidden;
+  background-color:#339BBE;
+column-count: 2;
+}
+
+.mover2{
+  column-count: 2;
+  margin-right: 10%;
+}
+ .mapa {
+    height: 300px;
+    padding: 0;
+margin-left: 15%;
+margin-right: 15%;
+margin-top: 1%;
+margin-bottom: 2%;
+
+z-index: 0;
+}
+
+
+body {
+  background: #ffffff;
+}
+.contain {
+  position: relative;
+  width: 350px;
+  margin-top: -16%;
+  margin-left: 68%;
+}
+.menu {
+  z-index: 1;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  color: #99A3BA;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #CDD9ED;
+  background: #fff;
+  transition: all .3s ease;
+}
+#checkTab {
+  display: none;
+}
+.menu .icon {
+  position: absolute;
+  top: 15px;
+  left: 8px;
+  width: 12px;
+  height: 1px;
+  background: currentColor;
+  transition: width .3s ease;
+}
+.menu .icon:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 14px;
+  height: 1px;
+  background: currentColor;
+  transition: width .3s;
+}
+.menu .icon:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 12px;
+  height: 1px;
+  background: currentColor;
+  transition: width .3s;
+}
+#checkTab:checked ~ .menu:hover {
+  transform: rotate(45deg);
+}
+#checkTab:not(:checked) ~ .menu {
+  box-shadow: 0 2px 12px -2px rgba(18, 22, 33, .1);
+}
+#checkTab:not(:checked) ~ .menu:hover .icon,
+#checkTab:not(:checked) ~ .menu:hover .icon::before,
+#checkTab:not(:checked) ~ .menu:hover .icon::after {
+  width: 14px;
+  transition: all .3s ease;
+}
+#checkTab:not(:checked) ~ .menu:hover .icon {
+  background: currentColor;
+}
+#checkTab:not(:checked) ~ .tabs {
+  display: none;
+}
+#checkTab:checked ~ .menu .icon {
+  background: transparent;
+}
+#checkTab:checked ~ .menu .icon:before {
+  width: 14px;
+  position: absolute;
+  top: 0px;
+  transform: rotate(45deg);
+  transition: all .3s ease;
+}
+#checkTab:checked ~ .menu .icon:after {
+  width: 14px;
+  position: absolute;
+  top: 0px;
+  transform: rotate(-45deg);
+  transition: all .3s ease;
+}
+
+.tabs {
+  width: 350px;
+  border-radius: 6px;
+  box-shadow: 0 4px 24px -2px rgb(10, 10, 10);
+  background: #fff;
+  color: #6C7486;
+}
+.nav-box {
+  font-size: 0;
+}
+.bot{
+  z-index: 10;
+  position: relative;
+  width: 24%;
+  height: 30px;
+  margin-left: 6%;
+  margin-bottom: -1px;
+  box-sizing: border-box;
+  outline: none;
+  background: #fff;
+  border: 0;
+  border-radius: 6px 6px 0 0;
+  font-size: 12px;
+  font-weight: 500;
+  color:  #99A3BA;
+  cursor: pointer;
+}
+button:focus-within {
+  border-bottom: 1px solid #339BBE;
+  color: #339BBE;
+  transition: color .3s ease;
+}
+.content-box {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-top: 1px solid #E4ECFA;
+  border-radius: 0 0 6px 6px;
+  background: #fff;
+  font-size: 14px;
+}
+.content-box > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+.nav-box:not(:focus-within) .nav-a {
+  border-bottom: 1px solid #339BBE;
+  color: #339BBE;
+}
+.nav-box:not(:focus-within) .content-a {
+  display: block;
+}
+.nav-a:focus-within ~ .content-box .content-a {
+  display: block;
+}
+.nav-b:focus-within ~ .content-box .content-b {
+  display: block;
+}
+
+.inputfile + label {
+  font-size: 1.00em;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  display: inline-block;
+}
+
+.inputp:focus + label,
+
+.inputp:hover {
+  background-color: rgb(227, 240, 248);
+  border: 1px solid rgb(89, 177, 235);
+}
+.inputfile + label {
+cursor: pointer; /* "hand" cursor */
+}
+
+.inputfile + label * {
+pointer-events: none;
+}
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.inputp{
+  border:  1px solid black;
+}
+.content { display: none; }
+.show { display: block; }
